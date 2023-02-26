@@ -1,0 +1,78 @@
+.TerminalInput {
+  width: 100%;
+  position: relative;
+  /* 
+  TODO: get inner box shadow working for input
+  -webkit-box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.35);
+  -moz-box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.35);
+  box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.35); */
+}
+
+.TerminalInput:after {
+  content: '>';
+  position: absolute;
+  top: 0.4rem;
+  left: 1.6rem;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  z-index: 1000;
+}
+
+.TerminalInput__inputEl {
+  width: calc(100% - 2rem);
+  padding: 1rem 0rem 1rem 4rem;
+  border: none;
+  background-color: var(--bg-color);
+  color: var(--primary-text-color);
+  caret-color: transparent;
+  font: 700 2.4rem 'IBM Plex Mono', monospace;
+}
+
+.TerminalInput__inputEl:focus {
+  outline: none;
+  background-color: var(--darkest-color);
+}
+
+.TerminalInput__inputEl::placeholder {
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--darkest-color);
+}
+
+.TerminalInput__carot {
+  position: absolute;
+  left: 2rem;
+  bottom: 0.6rem;
+  background-color: var(--primary-color);
+  border-radius: 0.4rem;
+  width: 1.8rem;
+  height: 0.4rem;
+  -webkit-animation: pulse 1.3s ease-in-out infinite;
+  -moz-animation: pulse 1.3s ease-in-out infinite;
+  -o-animation: pulse 1.3s ease-in-out infinite;
+  animation: pulse 1.3s ease-in-out infinite;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -ms-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+}
+
+/* .--waiting-focus {
+  animation: pulse 1.3s infinite;
+} */
+
+.--stop-animation {
+  animation: none;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0;
+  }
+}
+
+.TerminalInput__carot.--inactive {
+  visibility: hidden;
+}

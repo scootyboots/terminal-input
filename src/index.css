@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap');
+
+:root {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--bg-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* --darkest-color: #2a303a;
+  --lightest-color: white;
+  --bg-color: #333a45;
+  --primary-text-color: #939eae;
+  --primary-color: #f44c7f;
+  --secondary-color: #e11251;
+  --highlight-color: #fa8cad;
+  --second-highlight-color: #a44562; */
+
+  --darkest-color: #111;
+  --lightest-color: #eee;
+  --bg-color: #242424;
+  --primary-text-color: #eee;
+  --primary-color: #eee;
+  --secondary-color: #777;
+  --highlight-color: #da3333;
+  --second-highlight-color: #791717;
+
+  --margin-side: 1.5rem;
+  --margin-bottom: 2rem;
+  --rounded-corner: 0.3rem;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+}
+
+body *:focus {
+  outline: 1px dotted var(--primary-color);
+}
+
+body *::placeholder {
+  font-style: italic;
+}
+
+body * {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
